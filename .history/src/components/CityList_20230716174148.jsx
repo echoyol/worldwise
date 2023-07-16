@@ -7,7 +7,6 @@ function CityList({ cities, isLoading }) {
   if (isLoading) return <Spinner />
 
   if (!Array.isArray(cities)) {
-    console.log(cities)
     return <p>No cities found.</p>
   }
   return (

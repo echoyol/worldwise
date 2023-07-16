@@ -6,10 +6,9 @@ import CityItem from './CityItem'
 function CityList({ cities, isLoading }) {
   if (isLoading) return <Spinner />
 
-  if (!Array.isArray(cities)) {
-    console.log(cities)
-    return <p>No cities found.</p>
-  }
+  // if (!Array.isArray(cities)) {
+  //   return <p>No cities found.</p>
+  // }
   return (
     <ul className={styles.cityList}>
       {cities.map((city) => (

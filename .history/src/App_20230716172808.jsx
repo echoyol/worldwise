@@ -19,6 +19,7 @@ function App() {
         setIsLoading(true)
         const res = await fetch(`${BASE_URL}/cities`)
         const data = await res.json()
+        console.log(typeof data)
         setCities(data)
       } catch {
         alert('There was an error loading data...')

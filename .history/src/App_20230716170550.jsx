@@ -17,7 +17,7 @@ function App() {
     async function fetchCities() {
       try {
         setIsLoading(true)
-        const res = await fetch(`${BASE_URL}/cities`)
+        const res = await fetch('${BASE_URL}/cities')
         const data = await res.json()
         setCities(data)
       } catch {
@@ -26,9 +26,7 @@ function App() {
         setIsLoading(false)
       }
     }
-    fetchCities()
   }, [])
-
   return (
     <BrowserRouter>
       <Routes>
@@ -54,21 +52,11 @@ function App() {
         >
           <Route
             index
-            element={
-              <CityList
-                cities={cities}
-                isLoading={isLoading}
-              />
-            }
+            element={<CityList />}
           />
           <Route
             path='cities'
-            element={
-              <CityList
-                cities={cities}
-                isLoading={isLoading}
-              />
-            }
+            element={<CityList />}
           />
           <Route
             path='countries'
